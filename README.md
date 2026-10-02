@@ -1,6 +1,7 @@
 # Sudoku Solver
 
 <!-- CI-Badge folgt in Schritt A7, sobald der Workflow auf GitHub läuft -->
+[![CI](https://github.com/grumpytoasterXYZ/sudoku-solver/actions/workflows/ci.yml/badge.svg)](https://github.com/grumpytoasterXYZ/sudoku-solver/actions/workflows/ci.yml)
 
 Ein Sudoku-Solver in Java mit Web-Oberfläche: Ziffern in ein leeres Raster eintragen, bestätigen und das Puzzle wahlweise sofort oder Schritt für Schritt animiert lösen lassen.
 
