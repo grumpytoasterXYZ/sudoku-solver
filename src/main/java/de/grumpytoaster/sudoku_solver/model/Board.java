@@ -204,10 +204,16 @@ public final class Board {
     }
 
     /**
-     * Rechnet Zeile und Spalte in den Array-Index um und prüft dabei den Bereich.
-     * Einzige Stelle mit der Formel {@code row * SIZE + col}.
+     * Rechnet Zeile und Spalte in den Zellindex 0–80 um. Das ist die einzige
+     * Stelle mit der Formel {@code row * SIZE + col}; andere Klassen, z. B. der
+     * Validator, verwenden diese Methode statt die Formel zu wiederholen.
+     *
+     * @param row Zeile, 0–8
+     * @param col Spalte, 0–8
+     * @return Zellindex {@code row * 9 + col}
+     * @throws IllegalArgumentException wenn {@code row} oder {@code col} außerhalb von 0–8 liegt
      */
-    private static int index(int row, int col) {
+    public static int index(int row, int col) {
         if (row < 0 || row >= SIZE || col < 0 || col >= SIZE) {
             throw new IllegalArgumentException("Zeile und Spalte müssen zwischen 0 und 8 liegen. Sie waren: row: " + row + ", col: " + col);
         }
