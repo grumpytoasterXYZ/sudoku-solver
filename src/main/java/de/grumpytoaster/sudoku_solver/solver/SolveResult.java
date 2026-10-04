@@ -7,7 +7,9 @@ import de.grumpytoaster.sudoku_solver.model.Board;
  *
  * @param status   wie der Versuch ausgegangen ist
  * @param solution das gelöste Board bei {@link SolveStatus#SOLVED}, sonst {@code null}
- * @param steps    Anzahl der probeweise gesetzten Ziffern; Messgröße für den
+ * @param steps    Anzahl der Rateversuche, also der probeweise gesetzten Ziffern.
+ *                 Ziffern, die ein Solver logisch ableitet, zählen nicht. Beim naiven
+ *                 Backtracking ist jede gesetzte Ziffer geraten. Messgröße für den
  *                 Vergleich der Solver
  */
 public record SolveResult(SolveStatus status, Board solution, long steps) {
